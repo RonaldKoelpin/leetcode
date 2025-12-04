@@ -29,48 +29,70 @@ Constraints:
     All the points are unique.
 
 """
+from math import gcd
 
-class Solution:
-    def create_line(self, x, y) -> list[list[float], list[float]]:
-        starting_point = x
-        direction = []
-        for i in range(len(x)):
-            direction.append(y[i]-x[i])
-        return [starting_point, direction]
+def are_linearly_dependent(a, b, c):
+    """Checks wether the 2D points A, B, C lie on one line by checking whether the directional vectors AB and AC are
+    linearly dependent. Computes the determinant of the Matrix M = [AB AC] and checks whether det(M) == 0"""
+    det = (b[0]-a[0])*(c[1]-a[1]) - (b[1]-a[1])*(c[0]-a[0])
+    return det == 0
 
-
-    def is_point_on_line(self, p, starting_point, direction) -> bool:
-        mu = set({})
-        for i in range(len(p)):
-            if direction[i] != 0:
-                mu.add((p[i]-starting_point[i])/direction[i])
-            elif p[i]-starting_point[i] == 0:
-                continue
-            else: return False
-        if len(mu) > 1:
-            return False
-        return True
-
-    def max_points(self, points: list[list[int]]) -> int:
-        n = len(points)
-        if n <= 2: return n
-        max_points_on_line = 0
-        for i in range(n-1):
-            for j in range(i+1, n, 1):
-                starting_point, direction = self.create_line(points[i], points[j])
-                points_on_line = 0
-                for k in range(n):
-                    if k == i or k == j:
+def max_points(points: list[list[int]]) -> int:
+    n = len(points)
+    if n <= 2: return n
+    max_points_on_line = 2
+    for i in range(n-1):
+        for j in range(i+1, n):
+            points_on_line = 0
+            for k in range(n):
+                if k != i or k != j:
+                    if are_linearly_dependent(points[i], points[j], points[k]):
                         points_on_line += 1
-                    else:
-                        if self.is_point_on_line(points[k], starting_point, direction):
-                            points_on_line += 1
                 if points_on_line > max_points_on_line:
                     max_points_on_line = points_on_line
-        return max_points_on_line
+    return max_points_on_line
+
+def maxPoints(points: list[list[int]]) -> int:
+    n = len(points)
+    if n <= 2: return n
+    ans = 1
+    for i in range(n):
+        p1 = points[i]
+        slopes = {}
+        identical = 1 # every points is identical to itself
+        for j in range(i+1, n):
+            p2 = points[j]
+            # getting slope dx/dy.
+            # Don't divide to avoid floating point precision problems instead save tuple (dx, dy) to dict
+            dx = p2[0] - p1[0]
+            dy = p2[1] - p1[1]
+            if dx == 0 and dy == 0: # find identical points
+                identical += 1
+            # reduce slope
+            g = gcd(dx, dy)
+            dx //= g
+            dy //= g
+            if dx < 0 or (dx == 0 and dy < 0): # normalize slope
+                dx, dy = -dx, -dy
+            slope = (dx, dy)
+            if slope in slopes:
+                slopes[slope] += 1
+            else:
+                slopes[slope] = 1
+        max_num_points = identical
+        if slopes:
+            max_num_points = identical + max(slopes.values())
+        ans = max(ans, max_num_points)
+    return ans
+
+def main():
+    points1 = [[1, 1], [2, 2], [3, 3]]
+    points2 = [[1, 1], [3, 2], [5, 3], [4, 1], [2, 3], [1, 4]]
+    points3 = [[0,0], [1,-1], [-1,1]]
+    print(maxPoints(points1))
+    print(maxPoints(points2))
+    print(maxPoints(points3))
+
 
 if __name__ == "__main__":
-    points1 = [[1,1],[2,2],[3,3]]
-    points2 = [[1, 1], [3, 2], [5, 3], [4, 1], [2, 3], [1, 4]]
-    sol = Solution()
-    print(sol.max_points(points2))
+    main()
