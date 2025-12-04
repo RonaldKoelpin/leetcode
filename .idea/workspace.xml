@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="230282aa-97d9-48ff-a1de-77b6ca5b51cd" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maxPointsOnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/maxPointsOnLine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.GroupAnagrams.executor": "Run",
     "Python.animation_mwe.executor": "Run",
     "Python.maxPointsOnLine.executor": "Run",
     "Python.phase_plane.executor": "Run",
@@ -53,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "max-points",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/ronald-koelpin/projects/diffeq/trajectory_animation.py"
   }
 }]]></component>
