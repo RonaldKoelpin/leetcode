@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="230282aa-97d9-48ff-a1de-77b6ca5b51cd" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxPointsOnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/maxPointsOnLine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

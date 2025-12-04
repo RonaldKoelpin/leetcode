@@ -43,7 +43,7 @@ def max_points(points: list[list[int]]) -> int:
     max_points_on_line = 2
     for i in range(n-1):
         for j in range(i+1, n):
-            points_on_line = 0
+            points_on_line = 2
             for k in range(n):
                 if k != i or k != j:
                     if are_linearly_dependent(points[i], points[j], points[k]):
@@ -68,6 +68,7 @@ def maxPoints(points: list[list[int]]) -> int:
             dy = p2[1] - p1[1]
             if dx == 0 and dy == 0: # find identical points
                 identical += 1
+                continue
             # reduce slope
             g = gcd(dx, dy)
             dx //= g
