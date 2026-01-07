@@ -39,20 +39,19 @@ Constraints:
 
 """
 from functools import lru_cache
+MOD = 10**9 + 7
 
-class Solution:
-    @lru_cache(maxsize=None)
-    def rearrangeSticks(self, n: int, k: int) -> int:
-        # print(f"n = {n}, k = {k}")
-        mod = 10**9 + 7
-        if n < k or k == 0:
-            return 0
-        elif n == k:
-            return 1
-        return ((n-1)*self.rearrangeSticks(n-1,k) + self.rearrangeSticks(n-1,k-1))%mod
+@lru_cache(maxsize=None)
+def rearrangeSticks(n: int, k: int) -> int:
+    # print(f"n = {n}, k = {k}")
+    mod = MOD
+    if n < k or k == 0:
+        return 0
+    elif n == k:
+        return 1
+    return ((n-1)*rearrangeSticks(n-1,k) + rearrangeSticks(n-1,k-1))%mod
 
 if __name__ == "__main__":
     n = 105
     k = 20
-    sol = Solution()
-    print(sol.rearrangeSticks(n,k))
+    print(rearrangeSticks(n,k))

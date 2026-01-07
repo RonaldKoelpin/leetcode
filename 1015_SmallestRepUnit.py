@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SmallestRepUnit.py
-first version: 2025-11-24
-this version 2025-11-24
-@author: rk
-
 Q2. Smallest Integer Divisible by K
 Medium
 
@@ -40,22 +35,20 @@ Constraints:
 
 """
 
-class Solution:
-    def smallestRepunitDivByK(self, k: int) -> int:
-        if k%2 == 0 or k%5 == 0:
-            return -1
-
-        num = 1
-
-        for i in range(k):
-            if num%k == 0:
-                return i+1
-            num = (num*10 + 1)%k
-
+def smallestRepunitDivByK(k: int) -> int:
+    if k%2 == 0 or k%5 == 0:
         return -1
 
-sol = Solution()
+    num = 1
+
+    for i in range(k):
+        if num%k == 0:
+            return i+1
+        num = (num*10 + 1)%k
+
+    return -1
+
 k = 49993
-n = sol.smallestRepunitDivByK(k)
+n = smallestRepunitDivByK(k)
 print(f"k = {k}")
 print(f"Lengh = {n}")

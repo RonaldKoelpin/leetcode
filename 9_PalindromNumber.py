@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Palindrome.py
-first version: 2025-11-24
-this version 2025-11-24
-@author: rk
-
 Given an integer x, return true if x is a Palindrome (reads the same forwards and backwards), and false otherwise.
 
 Example 1:
@@ -36,33 +31,31 @@ Constraints:
 Follow up: Could you solve it without converting the integer to a string?
 """
 
-# my solution
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        s = str(x)
-        n = len(s)
-        for i in range(int(n/2)):
-            if s[i] != s[n-1-i]:
-                return False
-        return True
 
-    def isPalindromeNoString(self, x: int) -> bool:
-        if x < 0:
+def isPalindrome(x: int) -> bool:
+    s = str(x)
+    n = len(s)
+    for i in range(int(n/2)):
+        if s[i] != s[n-1-i]:
             return False
-        digits = []
-        while x > 0:
-            rem = x%10
-            digits.append(rem)
-            x = int((x-rem)/10)
-        n = len(digits)
-        for i in range(int(n/2)):
-            if digits[i] != digits[n-1-i]:
-                return False
-        return True
+    return True
+
+def isPalindromeNoString(x: int) -> bool:
+    if x < 0:
+        return False
+    digits = []
+    while x > 0:
+        rem = x%10
+        digits.append(rem)
+        x = int((x-rem)/10)
+    n = len(digits)
+    for i in range(int(n/2)):
+        if digits[i] != digits[n-1-i]:
+            return False
+    return True
 
 if __name__ == "__main__":
-    x = 2**17
-    sol = Solution()
+    x = 1100011
     print(f"Checking x = {x}:")
-    print(sol.isPalindrome(x))
-    print(sol.isPalindromeNoString(x))
+    print(isPalindrome(x))
+    print(isPalindromeNoString(x))

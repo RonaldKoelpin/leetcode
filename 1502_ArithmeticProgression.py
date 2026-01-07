@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-ArithmeticProgression.py
-first version: 2025-11-23
-this version 2025-11-23
-@author: rk
+1502_ArithmeticProgression.py
 
 A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
 
@@ -30,23 +27,22 @@ Constraints:
     -106 <= arr[i] <= 106
 """
 
+
 # my solution
-class Solution:
-    def canMakeArithmeticProgression(self, arr) -> bool:
-        arr.sort()
-        length = len(arr)
-        increment = arr[1] - arr[0]
-        for i in range(length-1):
-            diff = arr[i+1]-arr[i]
-            if(diff != increment):
-                return(False)
-        return(True)
+def canMakeArithmeticProgression(arr) -> bool:
+    arr.sort()
+    length = len(arr)
+    increment = arr[1] - arr[0]
+    for i in range(length-1):
+        diff = arr[i+1]-arr[i]
+        if(diff != increment):
+            return(False)
+    return(True)
 
 # faster Solution
-class Solution:
-    def canMakeArithmeticProgression(self, arr) -> bool:
-        arr.sort()
-        s = set()
-        for i in range(len(arr)-1):
-            s.add(arr[i+1]-arr[i])
-        return len(s) == 1
+def canMakeArithmeticProgression2(arr) -> bool:
+    arr.sort()
+    s = set()
+    for i in range(len(arr)-1):
+        s.add(arr[i+1]-arr[i])
+    return len(s) == 1

@@ -40,23 +40,21 @@ Constraints:
 
 """
 
-class Solution:
-    def plusOne(self, digits: list[int]) -> list[int]:
-        n = len(digits)
-        add = 1
-        for i in range(n-1,-1,-1):
-            new = digits[i] + add
-            if new == 10:
-                digits[i] = 0
-                add = 1
-            else:
-                digits[i] = new
-                add = 0
-        if add == 1:
-            digits = [add] + digits
-        return digits
+def plusOne(digits: list[int]) -> list[int]:
+    n = len(digits)
+    add = 1
+    for i in range(n-1,-1,-1):
+        new = digits[i] + add
+        if new == 10:
+            digits[i] = 0
+            add = 1
+        else:
+            digits[i] = new
+            add = 0
+    if add == 1:
+        digits = [add] + digits
+    return digits
 
 if __name__ == "__main__":
     digits = [9,9,9,9]
-    sol = Solution()
-    print(sol.plusOne(digits))
+    print(plusOne(digits))

@@ -4,7 +4,6 @@
 149. Max Points on a Line
 Hard
 Topics
-premium lock iconCompanies
 
 Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane, return the maximum number of
 points that lie on the same straight line.
@@ -59,7 +58,7 @@ def maxPoints(points: list[list[int]]) -> int:
     for i in range(n):
         p1 = points[i]
         slopes = {}
-        identical = 1 # every points is identical to itself
+        identical = 1 # every point is identical to itself
         for j in range(i+1, n):
             p2 = points[j]
             # getting slope dx/dy.
@@ -93,7 +92,6 @@ def main():
     print(maxPoints(points1))
     print(maxPoints(points2))
     print(maxPoints(points3))
-
 
 if __name__ == "__main__":
     main()

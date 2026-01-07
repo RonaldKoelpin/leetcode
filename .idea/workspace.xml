@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230282aa-97d9-48ff-a1de-77b6ca5b51cd" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/100_SameTree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/104_MaxDepth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/118_PascalTriangle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/172_trailingZeros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/263_UglyNumber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/69_SquareRoot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CountPrimes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maxPointsOnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/maxPointsOnLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArithmeticProgression.py" beforeDir="false" afterPath="$PROJECT_DIR$/1502_ArithmeticProgression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupAnagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/49_GroupAnagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/9_PalindromNumber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PascalTriangle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PivotInteger.py" beforeDir="false" afterPath="$PROJECT_DIR$/2485_PivotInteger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SelfDividingNumbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/728_SelfDividingNumbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmallestRepUnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/1015_SmallestRepUnit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ugly.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxPointsOnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/149_maxPointsOnLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/permuations.py" beforeDir="false" afterPath="$PROJECT_DIR$/60_PermutationSequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plusOne.py" beforeDir="false" afterPath="$PROJECT_DIR$/66_plusOne.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/power.py" beforeDir="false" afterPath="$PROJECT_DIR$/50_power.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqrt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticks.py" beforeDir="false" afterPath="$PROJECT_DIR$/1866_sticks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trailingZeros.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +67,33 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.118_PascalTriangle.executor": "Run",
+    "Python.50_power.executor": "Run",
+    "Python.60_PermutationSequence.executor": "Run",
+    "Python.728_SelfDividingNumbers.executor": "Run",
+    "Python.9_PalindromNumber.executor": "Run",
+    "Python.CountPrimes.executor": "Run",
     "Python.GroupAnagrams.executor": "Run",
+    "Python.SmallestRepUnit.executor": "Run",
+    "Python.Ugly.executor": "Run",
     "Python.animation_mwe.executor": "Run",
     "Python.maxPointsOnLine.executor": "Run",
     "Python.phase_plane.executor": "Run",
+    "Python.sqrt.executor": "Run",
+    "Python.sticks.executor": "Run",
+    "Python.trailingZeros.executor": "Run",
     "Python.trajectory_animation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ronald-koelpin/projects/diffeq/trajectory_animation.py"
+    "last_opened_file_path": "/home/ronald-koelpin/projects/ai_agent"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7bb8055f9097-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28238.29" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
   </component>
